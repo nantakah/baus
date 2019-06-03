@@ -81,7 +81,6 @@ img {
 .container {
   margin: 0 auto;
   overflow: hidden;
-  padding-bottom: 2000px;
 
   .mainvisual {
     background: transparent url('../img/movie_pc.png') no-repeat center top;
@@ -445,12 +444,12 @@ img {
 
   .officialpartner {
     margin-top: 80px;
+    padding-bottom: 48px;
 
     &__list {
       display: flex;
       justify-content: space-between;
       margin-top: 60px;
-      
       &__item {
         height: 270px;
         width: 270px;

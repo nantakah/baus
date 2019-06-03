@@ -67,7 +67,6 @@ img {
 .container {
   margin: 0 auto;
   overflow: hidden;
-  padding-bottom: 2000px;
 }
 
 .container .mainvisual {
@@ -484,6 +483,7 @@ img {
 
 .container .officialpartner {
   margin-top: 80px;
+  padding-bottom: 48px;
 }
 
 .container .officialpartner__list {

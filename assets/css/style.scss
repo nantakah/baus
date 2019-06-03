@@ -1,0 +1,76 @@
+
+$bg-color: #fafafa;
+$text-color: #454545;
+$font-size-lg: 24px;
+$font-size-rg: 20px;
+$font-size-sm: 14px;
+$key-color1: #9aaf24;
+$key-color2: #c9e23f;
+
+
+* {
+  box-sizing: border-box;
+  color: $text-color;
+  font-size: $font-size-rg;
+  font-family: "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  overflow: hidden;
+
+  .mainvisual {
+    background: transparent url('../img/movie_pc.png') no-repeat center center;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+
+    &__container {
+      font-weight: bold;
+      padding: 244px 0 80px 0;
+      position: relative;
+      text-align: center;
+
+      &:after {
+        background: transparent url(../img/scroll.png) no-repeat center center;
+        background-size: 100% auto;
+        bottom: 20px;
+        content: "";
+        display: block;
+        height: 26px;
+        left: 50%;
+        margin-left: -25px;
+        position: absolute;
+        width:50px;
+      }
+
+      &__logo {
+        display: inline-block;
+      }
+
+      p {
+        margin-top: 48px;
+      }
+
+      &__btn {
+        background-color: #000;
+        color: #fff;
+        display: block;
+        height: 60px;
+        line-height: 60px;
+        margin: 154px auto 0 auto;
+        width: 270px;
+      }
+    }
+  }
+
+  main {
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+}

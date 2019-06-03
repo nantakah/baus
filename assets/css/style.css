@@ -51,6 +51,14 @@ img {
   content: "プラットフォームについて";
 }
 
+.baus-headline.team:after {
+  content: "運営について";
+}
+
+.baus-headline.official:after {
+  content: "支援団体";
+}
+
 .baus-container {
   margin: 0 auto;
   width: 1200px;
@@ -278,6 +286,7 @@ img {
 }
 
 .container .platform p {
+  font-size: 15px;
   line-height: 1.8;
   margin-top: 59px;
 }
@@ -289,36 +298,205 @@ img {
   margin-top: 41px;
 }
 
-.container .platform__container__left {
+.container .platform__container__usertype {
   background-color: #fff;
   height: 618px;
-  padding: 97px;
+  padding-top: 97px;
   text-align: center;
+  width: 270px;
 }
 
-.container .platform__container__left h3 {
+.container .platform__container__usertype h3 {
   color: #ac873d;
   font-size: 14px;
   font-weight: bold;
 }
 
-.container .platform__container__left figure {
+.container .platform__container__usertype figure {
   margin-top: 40px;
 }
 
-.container .platform__container__left figure figcaption {
+.container .platform__container__usertype figure figcaption {
   color: #929292;
   font-size: 11px;
   font-weight: bold;
 }
 
-.container .platform__container__left figure + figure {
+.container .platform__container__usertype figure + figure {
   margin-top: 54px;
 }
 
-.container .platform__container__right {
+.container .platform__container__list {
   background-color: #fff;
   height: 618px;
   margin-left: 41px;
-  width: 100%;
+  width: 890px;
+}
+
+.container .platform__container__list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 46px 40px 40px;
+}
+
+.container .platform__container__list__item:not(:first-child) {
+  border-top: 1px solid #f4f4f4;
+}
+
+.container .platform__container__list__item__headline {
+  background: transparent url(../img/illust_creator_unit.png) no-repeat top right;
+  background-size: 127px 71px;
+  padding-top: 17px;
+  position: relative;
+  width: 383px;
+}
+
+.container .platform__container__list__item__headline h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.container .platform__container__list__item__headline h4 span {
+  font-size: 11px;
+  font-weight: bold;
+  position: absolute;
+  right: 139px;
+}
+
+.container .platform__container__list__item__headline p {
+  background-color: #ededed;
+  font-size: 12px;
+  margin-top: 42px;
+  padding: 14px 17px;
+  position: relative;
+}
+
+.container .platform__container__list__item__headline p:after {
+  background-color: #ededed;
+  content: "";
+  display: block;
+  height: 12px;
+  left: 17px;
+  position: absolute;
+  top: -6px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 12px;
+}
+
+.container .platform__container__list__item__desc {
+  font-size: 14px;
+  margin-left: 17px;
+  width: 430px;
+}
+
+.container .platform__container__list__item__desc h5 {
+  color: #ac873d;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.container .platform__container__list__item__desc p {
+  line-height: 1.7;
+  margin: 0;
+}
+
+.container .platform__contact {
+  background: #111111 url(../img/icon_mail.png) no-repeat right 20px center;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  height: 60px;
+  line-height: 60px;
+  margin: 40px auto 0;
+  text-align: center;
+  width: 580px;
+}
+
+.container .bausteam {
+  margin-top: 80px;
+}
+
+.container .bausteam p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-top: 60px;
+}
+
+.container .bausteam__list {
+  margin-top: 42px;
+}
+
+.container .bausteam__list__item {
+  -webkit-box-align: top;
+  -ms-flex-align: top;
+  align-items: top;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px;
+}
+
+.container .bausteam__list__item:not(:first-child) {
+  margin-top: 40px;
+}
+
+.container .bausteam__list__item figure img {
+  height: auto;
+  width: 230px;
+}
+
+.container .bausteam__list__item__desc {
+  margin-left: 40px;
+}
+
+.container .bausteam__list__item__desc span {
+  color: #ac873d;
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.container .bausteam__list__item__desc h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.container .bausteam__list__item__desc p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 23px;
+}
+
+.container .bausteam__list__item__desc p a {
+  color: #929292;
+  text-decoration: underline;
+}
+
+.container .officialpartner {
+  margin-top: 80px;
+}
+
+.container .officialpartner__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.container .officialpartner__list__item {
+  height: 270px;
+  width: 270px;
 }

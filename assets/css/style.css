@@ -2,22 +2,68 @@
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #454545;
+  color: #111111;
   font-size: 20px;
   font-family: "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+body {
+  background-color: #f4f4f3;
 }
 
 a {
   text-decoration: none;
 }
 
+img {
+  vertical-align: bottom;
+}
+
+.baus-headline {
+  border-top: 8px solid #1e2e53;
+  padding-top: 57px;
+  position: relative;
+}
+
+.baus-headline:before {
+  border-top: 8px solid #ac873d;
+  content: "";
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: -8px;
+  width: 451px;
+}
+
+.baus-headline:after {
+  bottom: 0;
+  content: "お知らせ";
+  color: #ac873d;
+  display: block;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+}
+
+.baus-headline.plat:after {
+  content: "プラットフォームについて";
+}
+
+.baus-container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
 .container {
   margin: 0 auto;
   overflow: hidden;
+  padding-bottom: 2000px;
 }
 
 .container .mainvisual {
-  background: transparent url("../img/movie_pc.png") no-repeat center center;
+  background: transparent url("../img/movie_pc.png") no-repeat center top;
   background-size: cover;
   height: 800px;
   width: 100%;
@@ -61,7 +107,218 @@ a {
   width: 270px;
 }
 
-.container main {
-  margin: 0 auto;
-  width: 1200px;
+.container .about {
+  background-color: #fff;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 80px 0 74px 0;
+}
+
+.container .about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .about__container__left p {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.12px;
+  line-height: 2;
+  margin-top: 32px;
+}
+
+.container .about__container__right {
+  margin-left: 270px;
+}
+
+.container .about__container__right h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container .about__container__right p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-top: 32px;
+}
+
+.container .registration {
+  background-color: #111111;
+  padding: 73px 0 78px 0;
+  text-align: center;
+}
+
+.container .registration h2 {
+  display: inline-block;
+}
+
+.container .registration p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 28px;
+}
+
+.container .registration__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.container .registration__form__mail {
+  border: none;
+  display: block;
+  letter-spacing: 0.1px;
+  padding: 23px 0 23px 31px;
+  width: 930px;
+}
+
+.container .registration__form input::-webkit-input-placeholder {
+  color: #111111;
+}
+
+.container .registration__form input:-ms-input-placeholder {
+  color: #111111;
+}
+
+.container .registration__form input::-ms-input-placeholder {
+  color: #111111;
+}
+
+.container .registration__form input::placeholder {
+  color: #111111;
+}
+
+.container .registration__form__submit {
+  background: #b34f36 url(../img/icon_register.png) no-repeat right 17px center;
+  border: none;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  width: 270px;
+}
+
+.container .news {
+  padding-top: 50px;
+}
+
+.container .news__container__list {
+  margin-top: 61px;
+}
+
+.container .news__container__list__item {
+  background-color: #fff;
+}
+
+.container .news__container__list__item:not(:first-child) {
+  border-top: 1px solid #f4f4f4;
+}
+
+.container .news__container__list__item a {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px;
+  position: relative;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.container .news__container__list__item a:hover {
+  background-color: #f4f4f4;
+}
+
+.container .news__container__list__item a:after {
+  background: transparent;
+  border-right: 1px solid #a1a1a1;
+  border-bottom: 1px solid #a1a1a1;
+  content: "";
+  display: block;
+  height: 12px;
+  margin-top: -6px;
+  position: absolute;
+  right: 23px;
+  top: 50%;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.container .news__container__list__item a figure {
+  display: inline-block;
+  margin-right: 44px;
+}
+
+.container .news__container__list__item__desc__date {
+  color: #ac873d;
+  font-size: 11px;
+}
+
+.container .news__container__list__item__desc__text {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.container .platform {
+  margin-top: 74px;
+}
+
+.container .platform p {
+  line-height: 1.8;
+  margin-top: 59px;
+}
+
+.container .platform__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 41px;
+}
+
+.container .platform__container__left {
+  background-color: #fff;
+  height: 618px;
+  padding: 97px;
+  text-align: center;
+}
+
+.container .platform__container__left h3 {
+  color: #ac873d;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container .platform__container__left figure {
+  margin-top: 40px;
+}
+
+.container .platform__container__left figure figcaption {
+  color: #929292;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.container .platform__container__left figure + figure {
+  margin-top: 54px;
+}
+
+.container .platform__container__right {
+  background-color: #fff;
+  height: 618px;
+  margin-left: 41px;
+  width: 100%;
 }

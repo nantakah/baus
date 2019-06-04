@@ -64,6 +64,16 @@ img {
   width: 1200px;
 }
 
+.sp {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sp {
+    display: block;
+  }
+}
+
 .container {
   margin: 0 auto;
   overflow: hidden;
@@ -73,13 +83,13 @@ img {
   background: transparent url("../img/movie_pc.png") no-repeat center top;
   background-size: cover;
   height: 800px;
+  position: relative;
   width: 100%;
 }
 
 .container .mainvisual__container {
   font-weight: bold;
   padding: 244px 0 80px 0;
-  position: relative;
   text-align: center;
 }
 
@@ -98,6 +108,10 @@ img {
 
 .container .mainvisual__container__logo {
   display: inline-block;
+}
+
+.container .mainvisual__container__logo a {
+  display: block;
 }
 
 .container .mainvisual__container p {
@@ -499,4 +513,93 @@ img {
 .container .officialpartner__list__item {
   height: 270px;
   width: 270px;
+}
+
+@media (max-width: 768px) {
+  .container .mainvisual {
+    background: transparent url(../img/movie_sp.png) no-repeat center center;
+    background-size: 100% auto;
+    height: 571px;
+  }
+  .container .mainvisual__container {
+    padding: 190px 0 0 0;
+  }
+  .container .mainvisual__container:after {
+    bottom: 28px;
+  }
+  .container .mainvisual__container__logo {
+    height: 105px;
+    width: 315px;
+  }
+  .container .mainvisual__container__logo a img {
+    width: 100%;
+  }
+  .container .mainvisual__container p {
+    font-size: 14px;
+    line-height: 1.2;
+    margin-top: 24px;
+  }
+  .container .mainvisual__container__btn {
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 64px;
+    width: 345px;
+  }
+  .container .about {
+    padding: 30px;
+  }
+  .container .about__container {
+    display: block;
+    width: 100%;
+  }
+  .container .about__container__left {
+    text-align: center;
+  }
+  .container .about__container__left h2 {
+    height: auto;
+    margin: 0 auto;
+    width: 219px;
+  }
+  .container .about__container__left h2 img {
+    width: 100%;
+  }
+  .container .about__container__left p {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+  .container .about__container__right {
+    margin: 31px 0 0 0;
+  }
+  .container .about__container__right h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .container .about__container__right p {
+    font-size: 13px;
+    margin-top: 29px;
+  }
+  .container .registration {
+    padding: 30px 0 15px 0;
+  }
+  .container .registration h2 {
+    height: auto;
+    width: 210px;
+  }
+  .container .registration h2 img {
+    width: 100%;
+  }
+  .container .registration p {
+    font-size: 11px;
+    line-height: 1.1;
+    padding: 0 30px;
+  }
+  .container .registration__form {
+    display: block;
+    margin-top: 15px;
+    padding: 0 15px;
+  }
+  .container .registration__form__mail {
+    width: 100%;
+  }
 }

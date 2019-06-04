@@ -78,6 +78,13 @@ img {
   width: 1200px;
 }
 
+.sp {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
 .container {
   margin: 0 auto;
   overflow: hidden;
@@ -86,12 +93,12 @@ img {
     background: transparent url('../img/movie_pc.png') no-repeat center top;
     background-size: cover;
     height: 800px;
+    position: relative;
     width: 100%;
 
     &__container {
       font-weight: bold;
       padding: 244px 0 80px 0;
-      position: relative;
       text-align: center;
 
       &:after {
@@ -109,6 +116,10 @@ img {
 
       &__logo {
         display: inline-block;
+
+        a {
+          display: block;
+        }
       }
 
       p {
@@ -457,4 +468,109 @@ img {
     }
   }
 
+}
+
+@media (max-width:768px) {
+  .container {
+    .mainvisual {
+      background: transparent url(../img/movie_sp.png) no-repeat center center;
+      background-size: 100% auto;
+      height: 571px;
+
+      &__container {
+        padding: 190px 0 0 0 ;
+
+        &:after {
+          bottom: 28px;
+        }
+
+        &__logo {
+          height: 105px;
+          width: 315px;
+
+          a {
+            img {
+              width: 100%;
+            }
+          }
+        }
+        p {
+          font-size: 14px;
+          line-height: 1.2;
+          margin-top: 24px;
+        }
+
+        &__btn {
+          font-size: 15px;
+          height: 50px;
+          line-height: 50px;
+          margin-top: 64px;
+          width: 345px;
+        }
+      }
+    } // .mainvisual
+
+    .about {
+      padding: 30px;
+      &__container {
+        display: block;
+        width: 100%;
+        &__left {
+          text-align: center;
+          h2 {
+            height: auto;
+            margin: 0 auto;
+            width: 219px;
+            img {
+              width: 100%;
+            }
+          }
+          p {
+            font-size: 11px;
+            line-height: 1.2;
+          }
+        } // .__left
+
+        &__right {
+          margin: 31px 0 0 0;
+
+          h3 {
+            font-size: 16px;
+            text-align: center;
+          }
+
+          p {
+            font-size: 13px;
+            margin-top: 29px;
+          }
+        }
+      }
+    } // .about
+
+    .registration {
+      padding: 30px 0 15px 0;
+      h2 {
+        height: auto;
+        width: 210px;
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        font-size: 11px;
+        line-height: 1.1;
+        padding: 0 30px;
+      }
+
+      &__form {
+        display: block;
+        margin-top: 15px;
+        padding: 0 15px;
+
+        &__mail {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

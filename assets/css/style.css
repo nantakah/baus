@@ -25,6 +25,11 @@ img {
   position: relative;
 }
 
+.baus-headline img {
+  height: 37px;
+  width: auto;
+}
+
 .baus-headline:before {
   border-top: 8px solid #ac873d;
   content: "";
@@ -59,9 +64,40 @@ img {
   content: "支援団体";
 }
 
+@media (max-width: 768px) {
+  .baus-headline {
+    border-top: 6px solid #1e2e53;
+    padding-top: 48px;
+    text-align: center;
+  }
+  .baus-headline img {
+    height: 24px;
+    width: auto;
+  }
+  .baus-headline:before {
+    border-top: 6px solid #ac873d;
+    right: 0;
+    top: -6px;
+    width: 105px;
+  }
+  .baus-headline:after {
+    font-size: 11px;
+    left: 0;
+    right: 0;
+    top: 24px;
+  }
+}
+
 .baus-container {
   margin: 0 auto;
   width: 1200px;
+}
+
+@media (max-width: 768px) {
+  .baus-container {
+    padding: 0 15px;
+    width: 100%;
+  }
 }
 
 .sp {
@@ -142,6 +178,11 @@ img {
   display: flex;
 }
 
+.container .about__container__left h2 img {
+  height: 49px;
+  width: auto;
+}
+
 .container .about__container__left p {
   font-size: 13px;
   font-weight: bold;
@@ -171,8 +212,13 @@ img {
   text-align: center;
 }
 
-.container .registration h2 {
-  display: inline-block;
+.container .registration p {
+  display: block;
+}
+
+.container .registration p img {
+  height: 30px;
+  width: auto;
 }
 
 .container .registration p {
@@ -298,7 +344,7 @@ img {
   margin-top: 74px;
 }
 
-.container .platform p {
+.container .platform__headtxt {
   font-size: 15px;
   line-height: 1.8;
   margin-top: 59px;
@@ -319,7 +365,7 @@ img {
   width: 270px;
 }
 
-.container .platform__container__usertype h3 {
+.container .platform__container__usertype p {
   color: #ac873d;
   font-size: 14px;
   font-weight: bold;
@@ -365,7 +411,7 @@ img {
   width: 383px;
 }
 
-.container .platform__container__list__item__headline h4 {
+.container .platform__container__list__item__headline h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,7 +420,12 @@ img {
   align-items: center;
 }
 
-.container .platform__container__list__item__headline h4 span {
+.container .platform__container__list__item__headline h3 img {
+  height: 17px;
+  width: auto;
+}
+
+.container .platform__container__list__item__headline h3 span {
   font-size: 11px;
   font-weight: bold;
   position: absolute;
@@ -409,8 +460,9 @@ img {
   width: 430px;
 }
 
-.container .platform__container__list__item__desc h5 {
+.container .platform__container__list__item__desc span {
   color: #ac873d;
+  display: block;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -547,7 +599,7 @@ img {
     width: 345px;
   }
   .container .about {
-    padding: 30px;
+    padding: 30px 15px;
   }
   .container .about__container {
     display: block;
@@ -563,6 +615,7 @@ img {
   }
   .container .about__container__left h2 img {
     width: 100%;
+    height: auto;
   }
   .container .about__container__left p {
     font-size: 11px;
@@ -580,7 +633,7 @@ img {
     margin-top: 29px;
   }
   .container .registration {
-    padding: 30px 0 15px 0;
+    padding: 30px 0 17px 0;
   }
   .container .registration h2 {
     height: auto;
@@ -600,6 +653,136 @@ img {
     padding: 0 15px;
   }
   .container .registration__form__mail {
+    font-size: 14px;
+    padding: 19px 0;
+    text-align: center;
     width: 100%;
+  }
+  .container .registration__form__submit {
+    font-weight: normal;
+    padding: 19px 0;
+    width: 100%;
+  }
+  .container .news {
+    padding-top: 30px;
+  }
+  .container .news__container__list {
+    margin-top: 42px;
+  }
+  .container .news__container__list__item a {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+  }
+  .container .news__container__list__item a figure {
+    margin-right: 0;
+  }
+  .container .news__container__list__item a figure img {
+    height: auto;
+    width: 165px;
+  }
+  .container .news__container__list__item__desc {
+    padding: 15px;
+  }
+  .container .news__container__list__item__desc__date {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .container .news__container__list__item__desc__text {
+    font-size: 12px;
+  }
+  .container .platform {
+    margin-top: 30px;
+  }
+  .container .platform__headtxt {
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+  .container .platform__container {
+    display: block;
+    margin-top: 30px;
+  }
+  .container .platform__container__usertype {
+    height: auto;
+    padding: 20px 0 15px 0;
+    text-align: center;
+    width: 100%;
+  }
+  .container .platform__container__usertype figure {
+    display: inline-block;
+    height: 85px;
+    margin-top: 10px;
+    width: 85px;
+  }
+  .container .platform__container__usertype figure img {
+    width: 100%;
+  }
+  .container .platform__container__usertype figure + figure {
+    margin-left: 35px;
+    margin-top: 10px;
+  }
+  .container .platform__container__usertype figcaption {
+    margin-top: 12px;
+  }
+  .container .platform__container__list {
+    margin-left: 0;
+    margin-top: 15px;
+    height: auto;
+    width: 100%;
+  }
+  .container .platform__container__list__item {
+    display: block;
+    padding: 0 15px 24px 15px;
+  }
+  .container .platform__container__list__item__headline {
+    background-position: right top 20px;
+    background-size: 105px auto;
+    padding-top: 40px;
+    width: 100%;
+  }
+  .container .platform__container__list__item__headline h3 img {
+    height: 13px;
+    width: auto;
+  }
+  .container .platform__container__list__item__headline h3 span {
+    right: 115px;
+  }
+  .container .platform__container__list__item__headline p {
+    font-size: 10px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .container .platform__container__list__item__desc {
+    font-size: 12px;
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .container .platform__container__list__item__desc span {
+    margin-bottom: 17px;
+  }
+  .container .platform__contact {
+    font-size: 14px;
+    margin-top: 30px;
+    width: 100%;
+  }
+  .container .bausteam {
+    margin-top: 43px;
+  }
+  .container .bausteam p {
+    margin-top: 30px;
+  }
+  .container .bausteam__list {
+    margin-top: 39px;
+  }
+  .container .bausteam__list__item {
+    display: block;
+  }
+  .container .bausteam__list__item__desc {
+    margin-left: 0;
   }
 }

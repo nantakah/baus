@@ -31,6 +31,10 @@ img {
   border-top: 8px solid #1e2e53;
   padding-top: 57px;
   position: relative;
+  img {
+    height: 37px;
+    width: auto;
+  }
 
   &:before {
     border-top: 8px solid $key-color1;
@@ -71,11 +75,39 @@ img {
       content: "支援団体";
     }
   }
+
+  @media (max-width: 768px) {
+    border-top: 6px solid #1e2e53;
+    padding-top: 48px;
+    text-align: center;
+    img {
+      height: 24px;
+      width: auto;
+    }
+
+    &:before {
+      border-top: 6px solid $key-color1;
+      right: 0;
+      top: -6px;
+      width: 105px;
+    }
+
+    &:after {
+      font-size: 11px;
+      left: 0;
+      right: 0;
+      top: 24px;
+    }
+  }
 }
 
 .baus-container {
   margin: 0 auto;
   width: 1200px;
+  @media (max-width: 768px) {
+    padding: 0 15px;
+    width: 100%;
+  }
 }
 
 .sp {
@@ -146,6 +178,13 @@ img {
     &__container {
       display: flex;
       &__left {
+
+        h2 {
+          img {
+            height: 49px;
+            width: auto;
+          }
+        }
         p {
           font-size: $font-size-sm;
           font-weight: bold;
@@ -176,8 +215,13 @@ img {
     padding: 73px 0 78px 0;
     text-align: center;
 
-    h2 {
-      display: inline-block;
+    p {
+      display: block;
+
+      img {
+        height: 30px;
+        width: auto;
+      }
     }
     p {
       color: #fff;
@@ -278,7 +322,7 @@ img {
 
   .platform {
     margin-top: 74px;
-    p {
+    &__headtxt {
       font-size: 15px;
       line-height: 1.8;
       margin-top: 59px;
@@ -294,7 +338,7 @@ img {
         padding-top: 97px;
         text-align: center;
         width: 270px;
-        h3 {
+        p {
           color: $key-color1;
           font-size: 14px;
           font-weight: bold;
@@ -331,9 +375,13 @@ img {
             position: relative;
             width: 383px;
 
-            h4 {
+            h3 {
               display: flex;
               align-items: center;
+              img {
+                height: 17px;
+                width: auto;
+              }
               span {
                 font-size: 11px;
                 font-weight: bold;
@@ -367,8 +415,9 @@ img {
             margin-left: 17px;
             width: 430px;
 
-            h5 {
+            span {
               color: $key-color1;
+              display: block;
               font-weight: bold;
               margin-bottom: 20px;
             }
@@ -511,7 +560,7 @@ img {
     } // .mainvisual
 
     .about {
-      padding: 30px;
+      padding: 30px 15px;
       &__container {
         display: block;
         width: 100%;
@@ -523,6 +572,7 @@ img {
             width: 219px;
             img {
               width: 100%;
+              height: auto;
             }
           }
           p {
@@ -548,7 +598,7 @@ img {
     } // .about
 
     .registration {
-      padding: 30px 0 15px 0;
+      padding: 30px 0 17px 0;
       h2 {
         height: auto;
         width: 210px;
@@ -568,9 +618,162 @@ img {
         padding: 0 15px;
 
         &__mail {
+          font-size: 14px;
+          padding: 19px 0;
+          text-align: center;
+          width: 100%;
+        }
+
+        &__submit {
+          font-weight: normal;
+          padding: 19px 0;
           width: 100%;
         }
       }
+    } // .registration
+
+    .news {
+      padding-top:  30px;
+      &__container {
+        &__list {
+          margin-top: 42px;
+
+          &__item {
+            a {
+              align-items: flex-start;
+              display: flex;
+              padding: 0;
+              figure {
+
+                margin-right: 0;
+                img {
+                  height: auto;
+                  width: 165px;
+                }
+              }
+            }
+
+            &__desc {
+              padding: 15px;
+
+              &__date {
+                font-size: 10px;
+                font-weight: bold;
+              }
+
+              &__text {
+                font-size: 12px;
+              }
+            }
+          } // __item
+        } // __list
+      }
+    } // .news
+
+    .platform {
+      margin-top: 30px;
+
+      &__headtxt {
+        margin-top: 30px;
+        padding: 0 15px;
+      }
+
+      &__container {
+        display: block;
+        margin-top: 30px;
+
+        &__usertype {
+          height: auto;
+          padding: 20px 0 15px 0;
+          text-align: center;
+          width: 100%;
+          figure {
+            display: inline-block;
+            height: 85px;
+            margin-top: 10px;
+            width: 85px;
+            img {
+              width: 100%;
+            }
+          }
+
+          figure + figure {
+            margin-left: 35px;
+            margin-top: 10px;
+          }
+
+          figcaption {
+            margin-top: 12px;
+          }
+        }
+
+        &__list {
+          margin-left: 0;
+          margin-top: 15px;
+          height: auto;
+          width: 100%;
+          &__item {
+            display: block;
+            padding: 0 15px 24px 15px;
+            &__headline {
+              background-position: right top 20px;
+              background-size: 105px auto;
+              padding-top: 40px;
+              width: 100%;
+              h3 {
+                img {
+                  height: 13px;
+                  width: auto;
+                }
+                span {
+                  right: 115px;
+                }
+              }
+              p {
+                font-size: 10px;
+                margin-top: 30px;
+                text-align: center;
+              }
+            }
+
+            &__desc {
+              font-size: 12px;
+              margin-left: 0;
+              margin-top: 20px;
+              width: 100%;
+
+              span {
+                margin-bottom: 17px;
+              }
+            }
+          }
+        }
+      }
+
+      &__contact {
+        font-size: 14px;
+        margin-top: 30px;
+        width: 100%;
+      }
+    } // .platform
+
+    .bausteam {
+      margin-top: 43px;
+
+      p {
+        margin-top: 30px;
+      }
+
+      &__list {
+        margin-top: 39px;
+        &__item {
+          display: block;
+          &__desc {
+            margin-left: 0;
+          }
+        }
+      }
     }
+
   }
 }
